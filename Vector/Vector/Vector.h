@@ -68,9 +68,9 @@ public:
         delete[] m_pData;
     }
 
-    std::size_t size() { return m_nSize; }
+    std::size_t size() const noexcept { return m_nSize; }
 
-    std::size_t capacity() { return m_nCapacity; }
+    std::size_t capacity() const noexcept { return m_nCapacity; }
 
     void pushBack(const T &value) {
         if (m_nSize == m_nCapacity) {
